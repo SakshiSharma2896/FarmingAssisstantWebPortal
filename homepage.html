@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>HOMEPAGE</title>
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+//crearing a class than use on div
+img{
+opacity: 0.5;
+}
+img:hover{
+opacity:1.0;
+}
+</style>
+</head>
+<body bgcolor="silver">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/download.jpg" style="width:100%" height="50%">
+  <div class="centered"><font color="white" face="Garamond" size="20"><b>FARMING ASSISSTANT WEB PORTAL</b></font></style></div>
+  <div class="text"><font color="white" face="Arial">"Agriculture not only gives riches to a nation, but the only riches he can call his own."</font></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/wallpaper.jpg" style="width:100%" height="50%">
+  <div class="centered"><font color="white" face="Garamond" size="20"><b>FARMING ASSISSTANT WEB PORTAL</b></font></div>
+  <div class="text"><font color="white" face="Arial">"Agriculture is the most helpful, most useful and most noble employment of man."</font></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/images.jpg" style="width:100%" height="50%">
+  <div class="centered"><font color="white" face="Garamond" size="20"><b>FARMING ASSISSTANT WEB PORTAL</b></font></div>
+  <div class="text"><font color="white" face="Arial">"The master's eye is the best fertilizer."</font></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<BR><BR>
+<div>
+<a href="farmerlogin.html"><img src="images/farmer.png" border="10" height="200" width="320" style="margin-left:140px" alt="image" ></a>
+<a href="adminlogin.html"><img src="images/admin.png" border="10" height="200" width="320" style="margin-left:60px" alt="img"></a>
+<a href="buyerlogin.html"><img src="images/buyer.png" border="10" height="200" width="320" style="margin-left:60px" alt="img"></a>
+</div>
+</body>
+</html>

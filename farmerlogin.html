@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<title>FARMER LOGIN</title>
+<style>
+.split{
+height: 100%;
+width: 50%;
+position: fixed;
+z-index: 1;
+top: 0;
+overflow-x: hidden;
+padding-top: 20px;
+}
+.left{
+left: 0;
+background-color: none;
+}
+.right{
+right: 0;
+background-color: silver;
+}
+.center{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+label{width:150px;
+display: inline-block;
+}
+textarea{ vertical-align:top;
+}
+.back{
+height: 160px;
+width: 100%;
+background-color: black;
+}
+.bodybg{
+background-image: url(images/farmerwall6.jpeg);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+height: 70%;
+width: 100%;
+}
+</style>
+</head>
+<body>
+<div class="back">
+<center><font color="white" face="Garamond" size="20" ><b>FARMING ASSISSTANT WEB PORTAL</b></font></style></center>
+</div>
+<div class="bodybg" style="margin-top:15px;">
+<center>
+
+
+<div class=" center" style="margin-top:30px;"  >
+<h1><font color="BLUE" face="Garamond"  ><center>FARMER LOGIN</font></center></h1>
+<form method="post" action="farmerlogin1.php">
+<label><b><font size="5">ID</font></b></label>
+<input type="text" placeholder="Enter ID" name="fid" style="width:60%;height:30px" required ><br><br>
+<label><b><font size="5">PASSWORD</font></b></label>
+<input type="password" placeholder="Enter Password" name="fpassword" style="width:60%;height:30px" required><br>
+<br><br>		
+<button type="submit" name="login" >LOGIN</button><br><br>
+<a href="farmerregistration.php">REGISTER HERE!</a>
+</form>
+</div>
+</div>
+</body>
+</html>

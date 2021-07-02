@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>ADMIN LOGIN</title>
+<style>
+.split{
+height: 100%;
+width: 50%;
+position: fixed;
+z-index: 1;
+top: 0;
+overflow-x: hidden;
+padding-top: 20px;
+}
+
+.bodybg{
+background-image: url(images/wall.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+height: 65%;
+width: 100%;
+}
+.left{
+left: 0;
+background-color: none;
+}
+.right{
+right: 0;
+background-color: silver;
+}
+.center{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+label{width:150px;
+display: inline-block;
+}
+textarea{ vertical-align:top;
+}
+.bgcolor{
+height: 80px;
+margin: 0;
+background: black;
+}
+.back{
+height: 170px;
+width: 100%;
+background-color: black;
+}
+
+</style>
+<!--<script>
+function loginfunction()
+{
+var id=document.myform.id.value;
+var password=document.myform.password.value;
+if(id=="admin" && password=="12345"){
+ alert("login successfully!");
+ window.open("adminpage.html");
+}
+else{
+ alert("login unsuccessfully!");
+}
+
+}
+</script>-->
+</head>
+<body>
+<div class="back">
+<center><font color="white" face="Garamond" size="20" ><b>FARMING ASSISSTANT WEB PORTAL</b></font></style></center>
+</div>
+<div class="bodybg">
+<center>
+
+<h1><font color="BLACK" face="Garamond" style="margin-top:20%"><center>ADMIN LOGIN</font></center></h1>
+<div>
+
+<form name="myform" method="post" action="adminlogin.php" ><!--onsubmit=" loginfunction();">-->
+<label><b><font size="5" color="red">ID</font></b></label>
+<input type="text" placeholder="Enter ID" name="spid" style="width:20%;height:30px" required><br><br>
+<label><b><font size="5" color="red">PASSWORD</font></b></label>
+<input type="password" placeholder="Enter Password" name="sppassword" style="width:20%;height:30px" required><br>
+<br><br>		
+<button type="submit" name="login" >LOGIN</button><br><br>
+</form>
+</div>
+</center>
+</div>
+<?php
+if(isset($_POST['login'])){
+	$aid= $_POST['spid'];
+	$apassword= $_POST['sppassword'];
+	
+	if($aid=="admin" && $apassword=="12345"){
+ 
+ header("location: SPlogin.php");
+}
+else{
+echo '<script type= "text/javascript"> alert("login failed!") </script>';	
+}
+}
+?>
+</body>
+</html>
